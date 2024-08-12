@@ -1,7 +1,0 @@
-{
-    "full_name": "Firstname Lastname",
-    "project_name": "Fellowship Project Name",
-    "__project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
-    "__package_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-    "project_short_description": "Boilerplate contains all the boilerplate you need to create a Python package."
-  }

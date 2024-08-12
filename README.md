@@ -1,22 +1,48 @@
-# Fellowship Template
+# nepali-sppech
 
-## Installing 
-```bash
-pip install cookiecutter
-```
-
-
-## Availabe Template
-As of now, we have only one Template available for fellowship with name `fellowship_template`.
-
-```bash
- cookiecutter gh:fuseai-fellowship/Fellowship-Template --directory fellowship_template
-``` 
+## Introduction
+## Goals
+## Contributors
+## Project Architecture
 
 
+# Status
+## Known Issue
+## High Level Next Steps
 
-## Adding your project to Github
-1. Initialize a GitHub Repository on `github.com`, initialize a new repository with the same name you use for this project. Uncheck any boxes for adding a .gitignore or README (By TA's)
-2. Create this project in your local directory. (Using Cookie Cutter)
-3. Follow the direction to add your local directory to GitHub using git: [https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github#adding-a-local-repository-to-github-using-git](https://docs.github.com/en/migrations/importing-source-code/using-the-command-line-to-import-source-code/adding-locally-hosted-code-to-github#adding-a-local-repository-to-github-using-git)
 
+# Usage
+## Installation
+To begin this project, use the included `Makefile`
+
+#### Creating Virtual Environment
+
+This package is built using `python-3.8`. 
+We recommend creating a virtual environment and using a matching version to ensure compatibility.
+
+#### pre-commit
+
+`pre-commit` will automatically format and lint your code. You can install using this by using
+`make use-pre-commit`. It will take effect on your next `git commit`
+
+#### pip-tools
+
+The method of managing dependencies in this package is using `pip-tools`. To begin, run `make use-pip-tools` to install. 
+
+Then when adding a new package requirement, update the `requirements.in` file with 
+the package name. You can include a specific version if desired but it is not necessary. 
+
+To install and use the new dependency you can run `make deps-install` or equivalently `make`
+
+If you have other packages installed in the environment that are no longer needed, you can you `make deps-sync` to ensure that your current development environment matches the `requirements` files. 
+
+## Usage Instructions
+
+
+# Data Source
+## Code Structure
+## Artifacts Location
+
+# Results
+## Metrics Used
+## Evaluation Results
