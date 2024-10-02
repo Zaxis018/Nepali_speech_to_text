@@ -40,6 +40,7 @@ Refere to the [dataset readme](./dataset/README.md) for details on the dataset, 
 
 ## Code Structure
 ## Artifacts Location
+HuggingFace Demo: https://huggingface.co/spaces/kshitizzzzzzz/NEPALI_ASR_Whisper_Small
 
 # Results
 ## Metrics Used
