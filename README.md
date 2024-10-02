@@ -1,4 +1,4 @@
-# nepali-sppech
+# Nepali Speech to Text Translation (ASR) System
 
 ## Introduction
 ## Goals
@@ -20,10 +20,6 @@ To begin this project, use the included `Makefile`
 This package is built using `python-3.8`. 
 We recommend creating a virtual environment and using a matching version to ensure compatibility.
 
-#### pre-commit
-
-`pre-commit` will automatically format and lint your code. You can install using this by using
-`make use-pre-commit`. It will take effect on your next `git commit`
 
 #### pip-tools
 
@@ -40,6 +36,8 @@ If you have other packages installed in the environment that are no longer neede
 
 
 # Data Source
+Refere to the [dataset readme](./dataset/README.md) for details on the dataset, sources, usablility and the link to data.
+
 ## Code Structure
 ## Artifacts Location
 
