@@ -69,9 +69,6 @@ def transcribe_large_audio(file_path, chunk_duration_sec=20, overlap_duration_se
     return full_transcription.strip()
 
 
-from tabulate import tabulate
-import textwrap
-
 def compare_texts(transcribed_text, ground_truth, width=50):
     """
     Compares the transcribed text with the ground truth side-by-side in a table.
