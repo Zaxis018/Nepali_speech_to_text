@@ -14,7 +14,7 @@
 # Usage
 ### Inference
 1) clone the repository
-- `https://github.com/fuseai-fellowship/Nepali-Speech-to-Text-Translation.git`
+- `git clone https://github.com/fuseai-fellowship/Nepali-Speech-to-Text-Translation.git`
 2) change to inference directory
 - `cd src/inference`
 3) run
