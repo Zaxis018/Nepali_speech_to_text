@@ -18,7 +18,7 @@
 2) change to source directory
 - `cd src/`
 3) run
--`streamlit run app.py`
+- `streamlit run app.py`
 
 ## Installation
 To begin this project, use the included `Makefile`
