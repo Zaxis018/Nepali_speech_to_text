@@ -12,6 +12,14 @@
 
 
 # Usage
+### Inference
+1) clone the repository
+- `https://github.com/fuseai-fellowship/Nepali-Speech-to-Text-Translation.git`
+2) change to source directory
+- `cd src/`
+3) run
+-`streamlit run app.py`
+
 ## Installation
 To begin this project, use the included `Makefile`
 
