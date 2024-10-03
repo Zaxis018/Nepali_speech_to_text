@@ -86,4 +86,4 @@ A lower WER indicates a better-performing model.
 
 ## Evaluation Results
 
-The current model has WER of 30 on common voice and other collected validation set.
+The current model has WER of 32 on common voice and other collected validation set.
