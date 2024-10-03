@@ -74,8 +74,8 @@ requirements.in: List of Python dependencies.
 
 Makefile: Commands to set up and manage the project.
 ## Artifacts Location
-HuggingFace Demo: https://huggingface.co/spaces/kshitizzzzzzz/NEPALI_ASR_Whisper_Small
-Model source code: https://github.com/huggingface/transformers/blob/main/src/transformers/models/whisper/modeling_whisper.py
+ - HuggingFace Demo: https://huggingface.co/spaces/kshitizzzzzzz/NEPALI_ASR_Whisper_Small
+ - Model source code: https://github.com/huggingface/transformers/blob/main/src/transformers/models/whisper/modeling_whisper.py
 
 # Results
 ## Metrics Used
