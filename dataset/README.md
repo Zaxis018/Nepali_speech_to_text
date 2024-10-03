@@ -1,7 +1,3 @@
-Here's a README draft for your Hugging Face dataset:
-
----
-
 # Nepali Speech-to-Text Dataset
 
 This dataset contains high-quality speech samples in Nepali, originally from [OpenSLR SLR43](https://www.openslr.org/43/) and Mozilla's [Common Voice dataset](https://discourse.mozilla.org/t/common-voice-19-0-dataset-release/135857/1). It has been cleaned and processed for Automatic Speech Recognition (ASR) tasks. The dataset consists of approximately 3,000 audio samples, each around 30 seconds long, compiled for use in training and testing ASR models.
