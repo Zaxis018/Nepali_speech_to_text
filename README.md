@@ -101,6 +101,8 @@ Makefile: Commands to set up and manage the project.
  - Model source code: https://github.com/huggingface/transformers/blob/main/src/transformers/models/whisper/modeling_whisper.py
 
 # Results
+![training loss and WER vs epochs](image.png)
+![train and val loss](image-1.png)
 ## Metrics Used
 We used the Word Error Rate (WER) to evaluate the accuracy of the ASR system. WER is calculated as follows:
 WER=Substitutions+Insertions+DeletionsTotal Words
