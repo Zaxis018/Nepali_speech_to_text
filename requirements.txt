@@ -1,0 +1,7 @@
+transformers
+torch
+sounddevice
+numpy
+soundfile
+streamlit
+librosa

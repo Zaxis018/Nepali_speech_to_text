@@ -6,8 +6,8 @@ This project aims to build an Automatic Speech Recognition (ASR) system  for the
 1. To create a high-quality, open-source ASR system for Nepali speech.
 2. To build a user-friendly demo for end-users to test and use the model for various applications.
 ## Contributors
-- **Amit Pant**
 - **Adhip Bhattarai**
+- **Amit Pant**
 - **Kshitiz Poudel**  
 - **Prabin Sharma Poudel**
 
@@ -60,6 +60,9 @@ Refere to the [dataset readme](./dataset/README.md) for details on the dataset, 
 
 ```python 
 
+## Updated Code Structure
+
+├── assets
 ├── dataset
 │   ├── male-female-data (SLR143)
 │   ├── ne_np_female (SLR43)
@@ -86,7 +89,9 @@ Refere to the [dataset readme](./dataset/README.md) for details on the dataset, 
 ├── Makefile
 ├── pyproject.toml
 ├── README.md
-└── requirements.in
+├── requirements.in
+├── requirements.txt
+
 ```
 
 datasets: Data preparation scripts.
@@ -101,8 +106,8 @@ Makefile: Commands to set up and manage the project.
  - Model source code: https://github.com/huggingface/transformers/blob/main/src/transformers/models/whisper/modeling_whisper.py
 
 # Results
-![training loss and WER vs epochs](image.png)
-![train and val loss](image-1.png)
+![training loss and WER vs epochs](assets/image.png)
+![train and val loss](assets/image-1.png)
 ## Metrics Used
 We used the Word Error Rate (WER) to evaluate the accuracy of the ASR system. WER is calculated as follows:
 WER=Substitutions+Insertions+DeletionsTotal Words
