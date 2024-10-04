@@ -31,14 +31,6 @@ This project aims to build an Automatic Speech Recognition (ASR) system  for the
 
 
 # Usage
-### Inference
-1) clone the repository
-- `git clone https://github.com/fuseai-fellowship/Nepali-Speech-to-Text-Translation.git`
-2) change to inference directory
-- `cd src/inference`
-3) run
-- `streamlit run app.py`
-
 ## Installation
 Use git clone.
 
@@ -46,16 +38,57 @@ Install the requirements with
 
 `pip install -r requirements.in`
 
-## Inference 
- `python src/inference.py test.mp3`
+
 
 ## Usage Instructions
+### GUI Inference
+1) clone the repository
+- `git clone https://github.com/fuseai-fellowship/Nepali-Speech-to-Text-Translation.git`
+2) change to inference directory
+- `cd src/inference`
+3) run
+- `streamlit run app.py`
+
+### CLI Inference
+ `python src/inference.py test.mp3`
 
 
 # Data Source
 Refere to the [dataset readme](./dataset/README.md) for details on the dataset, sources, usablility and the link to data.
 
 ## Code Structure
+
+```python 
+
+├── dataset
+│   ├── male-female-data (SLR143)
+│   ├── ne_np_female (SLR43)
+│   ├── preperation_scripts
+│   ├── scraping
+│   ├── synthetic_data_using_TTS
+│   └── README.md
+├── docs
+├── notebook
+│   ├── finetuning-whispher-on-Nepali-base_old_data.ipynb
+│   ├── finetuning-whispher-on-Nepali-small_old_data.ipynb
+│   ├── notebook_inference_and_push_hub.ipynb
+│   ├── whisper_fine_tune_5_epoch.ipynb
+│   └── whispher-finetune-on-small_NP_ASR_data.ipynb
+├── src
+│   ├── inference
+│   ├── inference.py
+│   ├── test.mp3
+│   ├── train.py
+│   └── utils.py
+├── tests
+│   └── test_template.py
+├── Dockerfile
+├── Makefile
+├── pyproject.toml
+├── README.md
+└── requirements.in
+```
+
 datasets: Data preparation scripts.
 src: Model training and architecture
 src/utils: utility functions for processing audio and model output
