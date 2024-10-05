@@ -1,5 +1,6 @@
-
+import random
 import textwrap
+import numpy as np
 from tabulate import tabulate
 from pydub import AudioSegment
 
@@ -16,6 +17,70 @@ def mp3_to_wav(input_file, output_file):
     audio.export(output_file, format="wav")
     print(f"File converted and saved as: {output_file}")
 
+
+def match_sample_rate(audio1, audio2=None, target_sample_rate=16000):
+    """Resample the audio files to match the target sample rate."""
+    if audio1.frame_rate != target_sample_rate:
+        audio1 = audio1.set_frame_rate(target_sample_rate)
+    if audio2 and audio2.frame_rate != target_sample_rate:
+        audio2 = audio2.set_frame_rate(target_sample_rate)
+    return audio1, audio2
+
+def generate_random_noise(duration_ms, sample_rate=16000):
+    """Generate random white noise."""
+    samples = np.random.normal(0, 1, int(sample_rate * (duration_ms / 1000))).astype(np.int16)
+    noise = AudioSegment(
+        samples.tobytes(), 
+        frame_rate=sample_rate, 
+        sample_width=samples.dtype.itemsize, 
+        channels=1
+    )
+    return noise
+
+
+def add_noise_to_audio(speech_file, noise_file=None, output_file="output_with_noise.wav", snr_dB=10):
+    """
+    Adds background noise to a speech audio file.
+    
+    Parameters:
+    - speech_file: Path to the speech file (mp3 or wav).
+    - noise_file: Path to the noise file (mp3 or wav) or None for random noise.
+    - output_file: Path for saving the output audio file.
+    - snr_dB: Signal-to-noise ratio in decibels. Default is 10dB.
+    """
+    # Load speech file
+    speech = AudioSegment.from_file(speech_file)
+    
+    # Generate random noise if no noise file is provided
+    if noise_file is None:
+        print("No noise file provided. Generating random white noise.")
+        noise = generate_random_noise(duration_ms=len(speech), sample_rate=speech.frame_rate)
+    else:
+        noise = AudioSegment.from_file(noise_file)
+
+    speech, noise = match_sample_rate(speech, noise)
+
+    if len(noise) < len(speech):
+        noise = noise * (len(speech) // len(noise) + 1)  
+    # Trim noise to the length of the speech
+    noise = noise[:len(speech)]
+
+    speech_samples = np.array(speech.get_array_of_samples())
+    noise_samples = np.array(noise.get_array_of_samples())
+
+    # Calculate the scaling factor based on desired SNR
+    speech_power = np.mean(speech_samples**2)
+    noise_power = np.mean(noise_samples**2)
+    scaling_factor = np.sqrt(speech_power / (noise_power * 10**(snr_dB / 10)))
+    
+    # Scale and add noise to the speech
+    scaled_noise = noise_samples * scaling_factor
+    merged_samples = speech_samples + scaled_noise
+
+    # Convert to AudioSegment and export
+    merged_audio = speech._spawn(merged_samples.astype(np.int16).tobytes())
+    merged_audio.export(output_file, format="wav")
+    print(f"Output saved as {output_file}")
 
 
 def transcribe_audio(audio_input, sampling_rate=16000):

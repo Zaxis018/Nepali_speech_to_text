@@ -109,12 +109,11 @@ Makefile: Commands to set up and manage the project.
 ![training loss and WER vs epochs](assets/image.png)
 ![train and val loss](assets/image-1.png)
 ## Metrics Used
-We used the Word Error Rate (WER) to evaluate the accuracy of the ASR system. WER is calculated as follows:
-WER=Substitutions+Insertions+DeletionsTotal Words
-WER=Total WordsSubstitutions+Insertions+Deletions​
-
+We used the **Word Error Rate (WER)** to evaluate the accuracy of the ASR system. WER is calculated as follows:
+\[
+\text{WER} = \frac{\text{Substitutions} + \text{Insertions} + \text{Deletions}}{\text{Total Words}}
+\]
 A lower WER indicates a better-performing model. 
 
 ## Evaluation Results
-
 The current model has WER of 32 on common voice and other collected validation set.
