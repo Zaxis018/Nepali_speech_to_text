@@ -2,14 +2,6 @@
 
 ## Introduction
 This project aims to build an Automatic Speech Recognition (ASR) system  for the Nepali language. Using OpenAI's Whisper Small model as the base, we fine-tuned it on a custom dataset to accurately transcribe Nepali speech into text. 
-## Goals
-1. To create a high-quality, open-source ASR system for Nepali speech.
-2. To build a user-friendly demo for end-users to test and use the model for various applications.
-## Contributors
-- **Adhip Bhattarai**
-- **Amit Pant**
-- **Kshitiz Poudel**  
-- **Prabin Sharma Poudel**
 
 ## Project Architecture
 1. **Data Preparation**: Scripts for cleaning, preprocessing, and augmenting Nepali speech data.
@@ -26,8 +18,6 @@ This project aims to build an Automatic Speech Recognition (ASR) system  for the
 ## High Level Next Steps
 1. Collect more diverse and high-quality Nepali speech data.
 2. Train larger models if gpu resources available
-
-
 
 
 # Usage
