@@ -95,8 +95,6 @@ Makefile: Commands to set up and manage the project.
 
 # Results
 ![training loss and WER vs epochs](assets/image.png)
-![train and val loss](assets/image-1.png)
-
 ## Metrics Used
 We used the Word Error Rate (WER) to evaluate the accuracy of the ASR system. WER is calculated as follows:
 
